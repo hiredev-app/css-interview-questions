@@ -1,52 +1,163 @@
 # yaml-language-server: $schema=https://webscope-hiring.herokuapp.com/api/questions-schema/
 questions:
-  # This is an example of a single choice question
-  - title: Who was the captain in the first pilot episode of the original Star Trek Series?
-    type: single_choice
-    hint: His name rhymes with "bike"
-    options:
-      - value: Captain America
-        correct: true
-      - value: Christopher Pike
-      - value: This is a new answer
-      - value: Christopher Columbus
-    body: |
-      Here is some JavaScript code:
-      ~~~js
-      console.log('It works!');
-      ~~~
-
-      And here is another:
-
-      ~~~js
-      console.log('It works again!');
-      ~~~
-    # This is an example of a multi choice question
-  - title: Which of these characters from Game of Thrones series died?
+  - title: "The four aspects that make up the box model are:"
     type: multi_choice
-    hint: There was a lot of dying...
     options:
-      - value: Sersei Lannister
+      - value: Padding
         correct: true
-      - value: Robb Stark
+      - value: Typography
+      - value: Margin
         correct: true
-      - value: Hodor
+      - value: Border
+        correct: true
+      - value: Content
+        correct: true
+      - value: Color
 
-  # This is an example of a full-text question (answers for full-text-questions are optional)
-  - title: If you store a pokemon in a PC does it become a digimon?
-    type: full_text
+  - title: "Select the correct pairs of text formatting and corresponding CSS properties:"
+    type: multi_choice
+    options:
+      - value: "Italic - font-weight: bold;"
+      - value: "Underline - text-decoration: underline;"
+        correct: true
+      - value: "Bold - font-weight: bold;"
+        correct: true
+      - value: "Italic - font-style: italic;"
+        correct: true
 
-  # This is an example of a question with body
-  - title: If you store a pokemon in a PC does it become a digimon?
-    type: full_text
+  - title: "Select legal CSS color values:"
+    type: multi_choice
+    options:
+      - value: "#00ff00"
+        correct: true
+      - value: hsla(120, 100%, 50%, 0.3)
+        correct: true
+      - value: 00ff00
+      - value: rgba(0, 255, 0, 0.3)
+        correct: true
+
+  - title: "Select legal CSS color values:"
+    type: multi_choice
+    options:
+      - value: blue
+        correct: true
+      - value: hsl(120, 100%, 50%)
+        correct: true
+      - value: cmyk(1, 0, 1, 0)
+      - value: rgb(0, 255, 0)
+        correct: true
+        
+  - title: Consider following CSS and HTML. How big will the vertical space between the paragraphs be?
+    type: single_choice
     body: |
-      Here is some JavaScript code:
-      ~~~js
-      console.log('It works!')
+      ~~~html
+      <style>
+        p {
+          margin-top: 32px;
+          margin-bottom: 24px;
+        }
+      </style>
+      <p>Paragraph One</p>
+      <p>Paragraph Two</p>
       ~~~
+    options:
+      - value: 56px
+      - value: 24px
+      - value: 32px
+        correct: true 
+        # Vertical margins collapse in Flow layout, the bigger margin wins. 
+      - value: 44px
 
-      And here is another:
-
-      ~~~js
-      console.log('It works again!')
+  - title: Consider following CSS and HTML. How big will the vertical space between the paragraphs be?
+    type: single_choice
+    body: |
+      ~~~html
+      <style>
+        p {
+          margin-top: 32px;
+          margin-bottom: 24px;
+        }
+      </style>
+      <div>
+        <p>Paragraph One</p>
+      </div>
+      <p>Paragraph Two</p>
       ~~~
+    options:
+      - value: 56px
+      - value: 24px
+      - value: 32px
+        correct: true 
+        # Margin will always try and increase distance between siblings, even if it means transferring margin to the parent element.
+        # Margins only collapse when they're touching. 
+      - value: 44px
+
+  - title: Consider following CSS and HTML. Will the child and parent margins collapse?
+    type: single_choice
+    body: |
+      ~~~html
+      <style>
+        .parent {
+          margin-top: 72px;
+        }
+        .child {
+          margin-top: 24px;
+        }
+      </style>
+      <div class="parent">
+        <p class="child">Paragraph One</p>
+      </div>
+      ~~~
+    options:
+      - value: No
+      - value: Yes
+        correct: true 
+        # Margins can collapse in the same direction.
+
+  - title: Consider following CSS and HTML. How big will the horizontal space between the paragraphs be?
+    type: single_choice
+    body: |
+      ~~~html
+      <style>
+        p {
+          margin-left: 32px;
+          margin-right: 24px;
+        }
+      </style>
+      <p>Paragraph One</p>
+      <p>Paragraph Two</p>
+      ~~~
+    options:
+      - value: 56px
+        correct: true
+        # Only vertical margins collapse. More accurately only block-direction margins collapse.
+        # We can switch writing modes using CSS, in which case block-level elements stack horizontally instead of vertically. 
+        # And when block elements are stacked horizontally, the rule flips: only horizontal margins collapse.
+      - value: 24px
+      - value: 32px
+      - value: 44px
+
+  - title: "Select correct scenarios to form a new stacking context:"
+    type: multi_choice
+    options:
+      - value: <body> element of the document.
+      - value: Element with a transparent background-color, for example background-color:rgba(255, 0, 0, 0).
+      - value: Element with a opacity value less than 1.
+        correct: true
+      - value: Element with a isolation value isolate.
+        correct: true
+      - value: Element with a position value absolute or relative and z-index value other than auto.
+        correct: true
+
+  - title: "Select correct scenarios to form a new stacking context:"
+    type: multi_choice
+    options:
+      - value: Root element of the document (<html>).
+        correct: true
+      - value: Element that is a child of a flex container, with z-index value other than auto.
+        correct: true
+      - value: Element that is a child of a grid container, with z-index value other than auto.
+        correct: true
+      - value: Element that is a child of a block container.
+      - value: Element with a position value fixed or sticky.
+        correct: true
