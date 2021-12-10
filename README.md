@@ -1,75 +1,23 @@
-![Image header](https://github.com/hiredev-app/interview-questions-template/blob/main/image-header.png?raw=true)
+![Image header](https://github.com/hiredev-app/css-interview-questions/blob/main/image-header.png?raw=true)
 
+## Questions
 
-# [hire.dev] - Interview Questions Template
+<details><summary>The four aspects that make up the box model are:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Padding</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Typography</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Margin</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Border</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Content</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Color</p><p></p></details>
 
-This is a template repository you can use to create your own questions
-set of questions compatible with hire.dev platform.
+<details><summary>Select the correct pairs of text formatting and corresponding CSS properties:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Italic - font-weight: bold;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Underline - text-decoration: underline;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Bold - font-weight: bold;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Italic - font-style: italic;</p><p></p></details>
 
-### What to do?
+<details><summary>Select legal CSS color values:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ #00ff00</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ hsla(120, 100%, 50%, 0.3)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ 00ff00</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ rgba(0, 255, 0, 0.3)</p><p></p></details>
 
-Simply clone this template, modify questions.yaml and make sure it's valid against the schema.
+<details><summary>Select legal CSS color values:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ blue</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ hsl(120, 100%, 50%)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ cmyk(1, 0, 1, 0)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ rgb(0, 255, 0)</p><p></p></details>
 
-- Github action will make sure the README.md is regenerated, so that your questions are open source in a nice format
-- In case you use hire.dev, please specify this repository in Questions section of your organisation and import the repo.
+<details><summary>Consider following CSS and HTML. How big will the vertical space between the paragraphs be?</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 56px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 24px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◉ 32px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 44px</p><p></p></details>
 
-## Motivation
+<details><summary>Consider following CSS and HTML. How big will the vertical space between the paragraphs be?</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 56px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 24px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◉ 32px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 44px</p><p></p></details>
 
-At hire.dev, we want to make it possible for a teams to manage their set of interview questions on 
-GitHub in form of a simple YAML file.
+<details><summary>Consider following CSS and HTML. Will the child and parent margins collapse?</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ No</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◉ Yes</p><p></p></details>
 
-1. We want team members to actively collaborate on a set of questions that are being asked during the interview process.
-2. We believe the questions are more relevant when being built continuously and naturally while building stuff instead of when they are prepared just for the sake of interview process. 
-3. Possibility to store them in YAML on GitHub gives people an opportunity to collaborate like on any other project. Ask questions, do pull-request reviews, create issues.
-4. The setup of this repo allows for this questions to be either just publicly available on GitHub, or be used as part of hire.dev platform.
+<details><summary>Consider following CSS and HTML. How big will the horizontal space between the paragraphs be?</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◉ 56px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 24px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 32px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 44px</p><p></p></details>
 
-## Schema
+<details><summary>Select correct scenarios to form a new stacking context:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ <body> element of the document.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Element with a transparent background-color, for example background-color:rgba(255, 0, 0, 0).</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element with a opacity value less than 1.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element with a isolation value isolate.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element with a position value absolute or relative and z-index value other than auto.</p><p></p></details>
 
-```yaml
-questions:
-- title: {question_name}
-  type: {full_text,single_choice,multi_choice}
-  options: # available just for single_choice,multi_choice questions
-  - value: {answer_no_1_text}
-    correct: true # only 1 correct answer possible for single_choice questions
-  - value: {answer_no_2_text}
-  hint: # optional hint 
-  body: |
-    Body of the question in Markdown to briefly describe the question more in detail
-    ~~~python
-    # You can even provide code snippets
-    ~~~
-```
-
-## How does hire.dev question repositories work?
-
-```
-                                                                                                      
-                                                                                                      
-                                            +--------------------------------------+                  
-+-------------------+                       |                                      |                  
-|Questions repository -------------------------------+    hire.dev                 |                  
-|no.1               |                       |        |                             |                  
-|                   |  hire.dev pulls       |  +-----|-----+                       |                  
-|+ questions.yaml   |  data from the repo   |  |           |                       |                  
-+-------------------+                       |  |           |                       |                  
-                                            |  |           |                       |                  
-                                            |  | Company's |                       |                  
-                                            |  | question  |    Job Pipeline       |                  
-+-------------------+                       |  | database  |    of a specific      |                  
-|Questions repository--------------------------|           |    interview          |                  
-|no. 2              |                       |  |           |    +-----------------+|                  
-|                   |                       |  +-----|-----+    | Introduction    ||                  
-|+ questions.yaml   |                       |        |          +-----------------+|                  
-+-------------------+                       |        |          +-----------------+|                  
-                                            |        +----------- Questions block ||                  
-                                            |  A subset of      +-----------------+|                  
-                                            |  questions        +-----------------+|                  
-                                            |  is chosen for    | Online meeting  ||                  
-                                            |  each individual  +-----------------+|                  
-                                            |  job type         +-----------------+|                  
-                                            |                   | Final block     ||                  
-                                            |                   +-----------------+|                  
-                                            +--------------------------------------+                  
-                                                                                           
-```
+<details><summary>Select correct scenarios to form a new stacking context:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Root element of the document (<html>).</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element that is a child of a flex container, with z-index value other than auto.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element that is a child of a grid container, with z-index value other than auto.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Element that is a child of a block container.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element with a position value fixed or sticky.</p><p></p></details>
