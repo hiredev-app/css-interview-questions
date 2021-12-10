@@ -2,22 +2,133 @@
 
 ## Questions
 
-<details><summary>The four aspects that make up the box model are:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Padding</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Typography</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Margin</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Border</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Content</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Color</p><p></p></details>
+<details>
+<summary>The four aspects that make up the box model are: | <i>Multi choice answer</i></summary>
 
-<details><summary>Select the correct pairs of text formatting and corresponding CSS properties:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Italic - font-weight: bold;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Underline - text-decoration: underline;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Bold - font-weight: bold;</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Italic - font-style: italic;</p><p></p></details>
+- [x] Padding
+- [ ] Typography
+- [x] Margin
+- [x] Border
+- [x] Content
+- [ ] Color</details>
 
-<details><summary>Select legal CSS color values:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ #00ff00</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ hsla(120, 100%, 50%, 0.3)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ 00ff00</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ rgba(0, 255, 0, 0.3)</p><p></p></details>
+<details>
+<summary>Select the correct pairs of text formatting and corresponding CSS properties: | <i>Multi choice answer</i></summary>
 
-<details><summary>Select legal CSS color values:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ blue</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ hsl(120, 100%, 50%)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ cmyk(1, 0, 1, 0)</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ rgb(0, 255, 0)</p><p></p></details>
+- [ ] Italic - font-weight: bold;
+- [x] Underline - text-decoration: underline;
+- [x] Bold - font-weight: bold;
+- [x] Italic - font-style: italic;</details>
 
-<details><summary>Consider following CSS and HTML. How big will the vertical space between the paragraphs be?</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 56px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 24px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◉ 32px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 44px</p><p></p></details>
+<details>
+<summary>Select legal CSS color values: | <i>Multi choice answer</i></summary>
 
-<details><summary>Consider following CSS and HTML. How big will the vertical space between the paragraphs be?</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 56px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 24px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◉ 32px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 44px</p><p></p></details>
+- [x] #00ff00
+- [x] hsla(120, 100%, 50%, 0.3)
+- [ ] 00ff00
+- [x] rgba(0, 255, 0, 0.3)</details>
 
-<details><summary>Consider following CSS and HTML. Will the child and parent margins collapse?</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ No</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◉ Yes</p><p></p></details>
+<details>
+<summary>Select legal CSS color values: | <i>Multi choice answer</i></summary>
 
-<details><summary>Consider following CSS and HTML. How big will the horizontal space between the paragraphs be?</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◉ 56px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 24px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 32px</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◯ 44px</p><p></p></details>
+- [x] blue
+- [x] hsl(120, 100%, 50%)
+- [ ] cmyk(1, 0, 1, 0)
+- [x] rgb(0, 255, 0)</details>
 
-<details><summary>Select correct scenarios to form a new stacking context:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ <body> element of the document.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Element with a transparent background-color, for example background-color:rgba(255, 0, 0, 0).</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element with a opacity value less than 1.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element with a isolation value isolate.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element with a position value absolute or relative and z-index value other than auto.</p><p></p></details>
+<details>
+<summary>Consider following CSS and HTML. How big will the vertical space between the paragraphs be? | <i>Single choice answer</i></summary>
 
-<details><summary>Select correct scenarios to form a new stacking context:</summary><p></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Root element of the document (<html>).</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element that is a child of a flex container, with z-index value other than auto.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element that is a child of a grid container, with z-index value other than auto.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☐ Element that is a child of a block container.</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;☒ Element with a position value fixed or sticky.</p><p></p></details>
+- [ ] 56px
+- [ ] 24px
+- [x] 32px
+- [ ] 44px
+~~~html
+<style>
+  p {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+</style>
+<p>Paragraph One</p>
+<p>Paragraph Two</p>
+~~~
+</details>
+
+<details>
+<summary>Consider following CSS and HTML. How big will the vertical space between the paragraphs be? | <i>Single choice answer</i></summary>
+
+- [ ] 56px
+- [ ] 24px
+- [x] 32px
+- [ ] 44px
+~~~html
+<style>
+  p {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+</style>
+<div>
+  <p>Paragraph One</p>
+</div>
+<p>Paragraph Two</p>
+~~~
+</details>
+
+<details>
+<summary>Consider following CSS and HTML. Will the child and parent margins collapse? | <i>Single choice answer</i></summary>
+
+- [ ] No
+- [x] Yes
+~~~html
+<style>
+  .parent {
+    margin-top: 72px;
+  }
+  .child {
+    margin-top: 24px;
+  }
+</style>
+<div class="parent">
+  <p class="child">Paragraph One</p>
+</div>
+~~~
+</details>
+
+<details>
+<summary>Consider following CSS and HTML. How big will the horizontal space between the paragraphs be? | <i>Single choice answer</i></summary>
+
+- [x] 56px
+- [ ] 24px
+- [ ] 32px
+- [ ] 44px
+~~~html
+<style>
+  p {
+    margin-left: 32px;
+    margin-right: 24px;
+  }
+</style>
+<p>Paragraph One</p>
+<p>Paragraph Two</p>
+~~~
+</details>
+
+<details>
+<summary>Select correct scenarios to form a new stacking context: | <i>Multi choice answer</i></summary>
+
+- [ ] <body> element of the document.
+- [ ] Element with a transparent background-color, for example background-color:rgba(255, 0, 0, 0).
+- [x] Element with a opacity value less than 1.
+- [x] Element with a isolation value isolate.
+- [x] Element with a position value absolute or relative and z-index value other than auto.</details>
+
+<details>
+<summary>Select correct scenarios to form a new stacking context: | <i>Multi choice answer</i></summary>
+
+- [x] Root element of the document (<html>).
+- [x] Element that is a child of a flex container, with z-index value other than auto.
+- [x] Element that is a child of a grid container, with z-index value other than auto.
+- [ ] Element that is a child of a block container.
+- [x] Element with a position value fixed or sticky.</details>
