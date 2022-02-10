@@ -109,8 +109,8 @@ questions:
       </div>
       ~~~
     options:
-      - value: No
-      - value: Yes
+      - value: "No"
+      - value: "Yes"
         correct: true 
         # Margins can collapse in the same direction.
 
